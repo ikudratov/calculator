@@ -40,14 +40,14 @@ public class Calculator {
 								System.out.println(result);
 							break;
 							default:
-								System.out.println("Xatolik ro'y berdi");
+								System.out.println("Ошибка: обнаружена ошибка");
 						}
 					} else {
-						System.out.println("Sonlar 10 dan katta bo'lmasligi lozim");
+						System.out.println("Ошибка: Числа не должны превышать 10 ти");
 					}
 				}catch(NumberFormatException e) {
 					try {
-						if(!makeSplit[0].matches("-?\\d+(\\.\\d+)?") || !makeSplit[1].matches("-?\\d+(\\.\\d+)?")) {
+						if(makeSplit[0].matches("-?\\d+(\\.\\d+)?") || makeSplit[1].matches("-?\\d+(\\.\\d+)?")) {
 							System.out.println("Ошибка: Используются одновременно разные системы счисления ");
 							System.exit(1);
 						}
@@ -77,13 +77,13 @@ public class Calculator {
 									System.out.println(new RomanNumber().intToRoman(result));
 								break;
 								default:
-									System.out.println("Xatolik ro'y berdi");
+									System.out.println("Ошибка: обнаружена ошибка");
 							}
 						} else {
-							System.out.println("Sonlar 10 dan katta bo'lmasligi lozim");
+							System.out.println("Ошибка: Числа не должны превышать 10 ти");
 						}
 					}catch(NumberFormatException e1) {
-						System.out.println("Введено неверно формат римские числа.");
+						System.out.println("Ошибка: Введено неверно формат римские числа.");
 					}
 				}
 			}
